@@ -1,21 +1,12 @@
 class Solution(object):
     def validPalindrome(self, s):  # "abca"
-        i, j, count = 0, len(s)-1, 0
-        while i <= j:
-            if s[i] == s[j]:
-                i += 1
-                j -= 1
-            else:
-                if s[i+1] == s[j]:
-                    i += 2
-                    j -= 1
-                elif s[i] == s[j-1]:
-                    i += 1
-                    j -= 2
-                else:
-                    return False
-            if i >= j:
-                return True
+        i, j = 0, len(s)-1
+        while i < j:
+            if s[i] != s[j]:
+                skipI, skipJ = s[i+1:j+1], s[i:j]
+                return (skipI == skipJ[::-1] or skipJ == skipJ[::-1])
+            i, j = i+1, j-1
+        return True
 
 
 myString = input("Enter the string: ")
