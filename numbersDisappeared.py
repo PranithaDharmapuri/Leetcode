@@ -11,7 +11,7 @@ class Solution:
         return missing
 
 
-myList = list(map(int, input().split(' ')))
+myList = list(map(int, input().split(',')))
 obj = Solution()
 res = obj.findDisappearedNumbers(myList)
 print(res)
