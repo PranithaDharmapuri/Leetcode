@@ -6,7 +6,7 @@ class Solution(object):
                 res+=ch.lower() 
         l=0
         r=len(res)-1
-        while(l<=r):
+        for i in range(len(res)):
             if res[l]!=res[r]:
                 return False
             l+=1
