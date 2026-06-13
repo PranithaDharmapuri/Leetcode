@@ -3,14 +3,11 @@ class Solution(object):
         res=""
         for ch in s:
             if ch.isalnum():
-                res+=ch.lower()
-        s=res
-
-        
+                res+=ch.lower() 
         l=0
         r=len(res)-1
         while(l<=r):
-            if s[l]!=s[r]:
+            if res[l]!=res[r]:
                 return False
             l+=1
             r-=1
