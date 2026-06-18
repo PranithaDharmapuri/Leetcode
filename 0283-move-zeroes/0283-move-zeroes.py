@@ -6,8 +6,7 @@ class Solution(object):
                 temp=nums[f]
                 nums[f]=nums[s]
                 nums[s]=temp
-                
-                s+=1
 
+                s+=1
         return nums
         
